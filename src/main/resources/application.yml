@@ -1,5 +1,7 @@
 server:
   port: 8083
+  servlet:
+    context-path: /goodbooks
 
 spring:
   datasource:
@@ -17,9 +19,11 @@ spring:
 bookinfo:
   url: "http://localhost"
   port: 8081
+  basepath: goodbooks
   resource: books
 
 bookrating:
   url: "http://localhost"
   port: 8082
+  basepath: goodbooks
   resource: rating

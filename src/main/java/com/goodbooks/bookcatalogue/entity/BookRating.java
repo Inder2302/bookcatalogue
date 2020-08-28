@@ -1,6 +1,5 @@
 package com.goodbooks.bookcatalogue.entity;
 
-
 public class BookRating {
 
     private String userId;

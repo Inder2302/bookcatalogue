@@ -7,6 +7,7 @@ public class BookRatingConfig {
 
     private String url;
     private String port;
+    private String basepath;
     private String resource;
 
     public void setUrl(String url) {
@@ -22,6 +23,10 @@ public class BookRatingConfig {
     }
 
     public String getEndPoint() {
-        return url + ":" + port + "/" + resource ;
+        return url + ":" + port + "/" + basepath + "/" + resource ;
+    }
+
+    public void setBasepath(String basepath) {
+        this.basepath = basepath;
     }
 }

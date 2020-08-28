@@ -1,8 +1,5 @@
 package com.goodbooks.bookcatalogue.entity;
 
-
-import javax.persistence.Column;
-
 public class Book {
 
     private String bookId;
