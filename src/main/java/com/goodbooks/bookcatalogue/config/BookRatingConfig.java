@@ -6,7 +6,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class BookRatingConfig {
 
     private String url;
-    private String port;
     private String basepath;
     private String resource;
 
@@ -14,16 +13,12 @@ public class BookRatingConfig {
         this.url = url;
     }
 
-    public void setPort(String port) {
-        this.port = port;
-    }
-
     public void setResource(String resource) {
         this.resource = resource;
     }
 
     public String getEndPoint() {
-        return url + ":" + port + "/" + basepath + "/" + resource ;
+        return url + "/" + basepath + "/" + resource ;
     }
 
     public void setBasepath(String basepath) {

@@ -4,6 +4,8 @@ server:
     context-path: /goodbooks
 
 spring:
+  application:
+    name: bookCatalogueService
   datasource:
     url: jdbc:h2:mem:cataloguedb
     driverClassName: org.h2.Driver
@@ -17,13 +19,20 @@ spring:
       path: /h2
 
 bookinfo:
-  url: "http://localhost"
-  port: 8081
+  url: "http://bookInformationService"
   basepath: goodbooks
   resource: books
 
 bookrating:
-  url: "http://localhost"
-  port: 8082
+  url: "http://bookRatingService"
   basepath: goodbooks
   resource: rating
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8700/eureka/
